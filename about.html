@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Clothing Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
+    <!-- font awesome cdn link for all icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="text-[16px] font-[400] bg-[#ffffff] text-black">
+
+    <!-- +++++++++++++++++++++++++++++++++ NAVBAR SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <header class="bg-white shadow-lg">
+        <div class="container mx-auto px-5">
+            <nav class="flex items-center justify-between py-6">
+                <div class="logo">
+                    <a href="">
+                        <img src="/Images/header-logo.svg" alt="">
+                    </a>
+                </div>
+                <button class="menu-toggle border border-red-500 rounded-[5px] p-[2px] md:hidden" id="menu-btn">
+                    <span class="hamburger">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                            <path fill-rule="evenodd"
+                                d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    <span class="close">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                            <path fill-rule="evenodd"
+                                d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+                    </span> <!-- × -->
+                </button>
+                <ul class="md:flex items-center gap-6 hidden">
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300 text-red-500"
+                            href="index.html">Home</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="shop.html"
+                            target="_blank">Shop</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300"
+                            href="blog.html">Blog</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="about.html"
+                            target="_blank">About</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="career.html"
+                            target="_blank">Carrers</a>
+                    </li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="faqs.html"
+                            target="_blank">FAQ's</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="contact.html"
+                            target="_blank">Contact</a>
+                    </li>
+                </ul>
+                <div class="icons md:flex hidden items-center gap-4">
+                    <button class="cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        </svg>
+                    </button>
+                    <button class="Bag-icon cursor-pointer relative transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                        </svg>
+                        <span
+                            class="absolute top-[-7px] left-[20px] bg-black w-[18px] h-[18px] rounded-full text-white flex items-center justify-center text-sm transition duration-300">0</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <div class="py-4 md:flex hidden items-center justify-center bg-black text-white">
+            <p>Get 15% off on your first order</p>
+        </div>
+    </header>
+    <div class="mobile__menu bg-white shadow-lg md:hidden" id="mobileMenu">
+        <ul class="flex flex-col space-y-7 py-7 px-2">
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300 text-red-500"
+                    href="index.html">Home <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="shop.html">Shop <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="blog.html">Blog <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="about.html" target="_blank">About <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="career.html" target="_blank">Carrers <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="faqs.html" target="_blank">FAQ's <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="contact.html" target="_blank">Contact <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- +++++++++++++++++++++++++++++++++ NAVBAR SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ ABOUT HERO SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <section class="about__section relative flex flex-col items-center justify-center text-white">
+        <div class="absolute inset-0 bg-black/70"></div>
+        <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold text-center z-10 mb-5">Style That <br> Moves
+            With You</h1>
+        <p class="text-center md:text-lg z-10 font-[500]">Born from a passion for timeless design and everyday
+            <br>comfort
+        </p>
+    </section>
+    <!-- +++++++++++++++++++++++++++++++++ ABOUT HERO SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ VELORA SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <section class="py-[80px]">
+        <div class="flex flex-col items-center justify-center space-y-2">
+            <h2 class="text-4xl md:text-5xl font-bold text-center">What Makes Velora Stand <br>Out</h2>
+            <p class="md:text-lg font-[500] text-center">Style, Comfort & More – Here’s Why You’ll Love Us</p>
+        </div>
+        <div class="container mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start pt-[50px]">
+                <div
+                    class="glass border border-gray-400 rounded-[24px] flex flex-col items-center justify-center py-10 px-8 space-y-2.5">
+                    <div class="text-[70px] text-[#ef233c]">
+                        <i class="fa-solid fa-shirt"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-center">Premium Quality</h4>
+                    <p class="text-center">Crafted with care using soft, durable fabrics designed to last and feel
+                        amazing.</p>
+                </div>
+                <div
+                    class="glass border border-gray-400 rounded-[24px] flex flex-col items-center justify-center py-10 px-8 md:mt-[70px] mb-0 space-y-2.5">
+                    <div class="fill-[#ef233c]">
+                        <svg xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" fill-rule="evenodd" height="70"
+                            stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 100 101" width="70">
+                            <path
+                                d="m56.508 3.762c-2.054.256-4.241.394-6.508.394s-4.454-.138-6.508-.394c-.462-.989-1.321-1.752-2.384-2.084-1.307-.408-2.733-.104-3.76.801l-9.767 8.609c-1.314 1.158-1.7 3.047-.947 4.628 0 0 1.499 3.144 3.094 6.511.002.002.003.005.004.007 2.163 4.539 2.816 9.65 1.864 14.587-.002.008-.003.015-.005.023-2.479 13.29-15.192 51.624-15.192 51.624-.579 1.75.139 3.667 1.726 4.606 0 0 10.585 6.426 31.875 6.426s31.875-6.426 31.875-6.426c1.587-.939 2.305-2.856 1.726-4.606 0 0-12.713-38.336-15.201-51.625-.002-.007-.003-.014-.004-.021-.952-4.938-.299-10.051 1.865-14.591l3.105-6.515c.753-1.581.367-3.47-.947-4.628l-9.767-8.609c-1.027-.905-2.453-1.209-3.76-.801-1.063.332-1.922 1.095-2.384 2.084zm13.586 89.513c6.527-1.648 9.785-3.575 9.785-3.575s-12.82-38.716-15.332-52.135c-1.111-5.76-.349-11.725 2.175-17.02 1.605-3.367 3.105-6.516 3.105-6.516l-9.767-8.609c-1.562 6.303-7.273 15.058-9.069 15.234-.559.055-1.423.055-1.982 0-1.796-.176-7.507-8.931-9.069-15.234l-9.767 8.609s1.5 3.149 3.098 6.519c2.523 5.294 3.285 11.257 2.174 17.015-2.504 13.421-15.324 52.137-15.324 52.137s3.258 1.927 9.785 3.575l8.38-37.968c.233-1.056 1.28-1.724 2.336-1.491 1.057.233 1.725 1.28 1.492 2.336l-8.38 37.97c3.921.752 8.689 1.328 14.306 1.439v-29.869c0-1.082.878-1.96 1.96-1.96s1.96.878 1.96 1.96v29.869c5.617-.111 10.385-.687 14.306-1.439l-8.38-37.97c-.233-1.056.435-2.103 1.492-2.336 1.056-.233 2.103.435 2.336 1.491zm-25.194-85.426c.895 2.123 2.078 4.284 3.226 6.068.574.892 1.339 1.855 1.874 2.499.535-.644 1.3-1.607 1.874-2.499 1.148-1.784 2.331-3.945 3.226-6.068-1.643.148-3.349.227-5.1.227s-3.457-.079-5.1-.227z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-center">Timeless Style</h4>
+                    <p class="text-center max-w-[180px]">Clean silhouettes and versatile pieces you can wear season
+                        after season.</p>
+                </div>
+                <div
+                    class="glass border border-gray-400 rounded-[24px] flex flex-col items-center justify-center py-10 px-8 space-y-2.5">
+                    <div class="fill-[#ef233c]">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 512 512" width="70"
+                            height="70">
+                            <path
+                                d="M394.734,136.481,344,118.033V96a8,8,0,0,0-5.029-7.428l-36.2-14.48L295.761,46.06A8,8,0,0,0,288,40h-8V16a8,8,0,0,0-8-8H240a8,8,0,0,0-8,8V40h-8a8,8,0,0,0-7.761,6.06l-7.008,28.032-36.2,14.48A8,8,0,0,0,168,96v22.033l-50.734,18.448a8,8,0,0,0-5,9.555L151.312,294.42C143.308,306.732,120,352.2,120,464a8,8,0,0,0,8,8h96v24a8,8,0,0,0,8,8h48a8,8,0,0,0,8-8V472h96a8,8,0,0,0,8-8c0-111.8-23.308-157.268-31.312-169.58l39.049-148.384A8,8,0,0,0,394.734,136.481ZM328,101.416V104a8,8,0,0,0,0,16v16a8,8,0,0,0,0,16v16a8,8,0,0,0,0,16v16a8,8,0,0,0,0,16v16a8,8,0,0,0,0,16v16a8,8,0,0,0,0,16v16a8,8,0,0,0,0,16v16a8,8,0,0,0,0,16v16H312V112a7.977,7.977,0,0,0-.239-1.94l-4.205-16.822ZM248,24h16V40H248ZM184,392h16v16H184Zm0-290.584,20.444-8.178-4.2,16.822A7.977,7.977,0,0,0,200,112V376H184V344a8,8,0,0,0,0-16V312a8,8,0,0,0,0-16V280a8,8,0,0,0,0-16V248a8,8,0,0,0,0-16V216a8,8,0,0,0,0-16V184a8,8,0,0,0,0-16V152a8,8,0,0,0,0-16V120a8,8,0,0,0,0-16ZM272,488H240V472h32Zm103.958-32H136.042c1.237-118.417,29.789-154.5,30.032-154.794a8,8,0,0,0,1.663-7.242L129.594,149.023,168,135.058V416a8,8,0,0,0,8,8h32a8,8,0,0,0,8-8V112.985L230.246,56h51.508L296,112.985V368a8,8,0,0,0,8,8h32a8,8,0,0,0,8-8V296.078a7.774,7.774,0,0,0,1.874,5.067C346.168,301.5,374.721,337.583,375.958,456Zm-31.7-162.036a8.2,8.2,0,0,0-.263,1.82V135.058l38.406,13.965Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-center">In-House Design</h4>
+                    <p class="text-center">Every detail is imagined by our in-house design team to bring you standout
+                        staples.</p>
+                </div>
+                <div
+                    class="glass border border-gray-400 rounded-[24px] flex flex-col items-center justify-center py-10 px-8 md:mt-[70px] mb-0">
+                    <div class="text-[70px] text-[#ef233c]">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-center">For Every Body</h4>
+                    <p class="text-center">Inclusive fits and sizes designed to flatter all shapes, ages, and styles.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- +++++++++++++++++++++++++++++++++ VELORA SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ DESIGNED SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <section class="design__section flex flex-col items-center justify-center space-y-4 relative">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <h2 class="text-4xl z-10 md:text-6xl font-bold text-white max-w-2xl text-center">Thoughtfully Designed for All
+        </h2>
+        <p class="text-white max-w-2xl z-10 text-center md:text-left mx-auto">Our range covers Men, Women, and Kids,
+            with each piece carefully crafted to
+            combine form, function, and feeling. From the perfect polo to the softest loungewear and statement
+            outerwear, everything at Velora is designed with real life in mind — easy to wear, easy to love. We also
+            believe in the power of details. That’s why we obsess over fit, fabric, and finish — so you don’t have to.
+        </p>
+        <a class="py-3 px-6 rounded-full bg-[#0E9F6E] text-white z-10 text-lg font-[500] cursor-pointer hover:bg-[#31C48D
+] transition duration-300" href="shop.html">SHOP NOW</a>
+    </section>
+    <!-- +++++++++++++++++++++++++++++++++ DESIGNED HERO SECTION START ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ PURPOSE SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <section class="purpose__section py-[100px]">
+        <div class="flex flex-col items-center justify-center space-y-2">
+            <h2 class="text-4xl md:text-5xl font-bold text-center">Our Purpose, Your Style</h2>
+            <p class="md:text-lg font-[500] text-center max-w-xl mx-auto">At Velora, everything we create starts with
+                you — your lifestyle, your confidence, and your need for fashion that truly fits.</p>
+        </div>
+        <div class="container mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start pt-[50px]">
+                <div
+                    class="glass py-14 px-10 rounded-[32px] border border-gray-400 flex flex-col items-center justify-center space-y-3.5">
+                    <div
+                        class="w-[50px] h-[50px] rounded-full flex items-center justify-center bg-[#ef233c] text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold">Our Mission</h4>
+                    <p class="text-center max-w-[400px]">To create timeless, high-quality fashion that blends comfort
+                        with confidence. We’re here to empower individuals of all ages and body types with clothing that
+                        fits seamlessly into real life — versatile, inclusive, and made to be lived in. We design with
+                        purpose, craft with care, and always put people first.</p>
+                </div>
+                <div
+                    class="glass py-14 px-10 rounded-[32px] border border-gray-400 md:mt-[70px] flex flex-col items-center justify-center space-y-3.5">
+                    <div
+                        class="w-[50px] h-[50px] rounded-full flex items-center justify-center bg-[#ef233c] text-white fill-[white]">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 512 512.00069" width="24">
+                            <path
+                                d="m256.855469 178.625c7.046875 0 12.753906-5.710938 12.753906-12.753906 0-7.042969-5.707031-12.753906-12.753906-12.753906-56.347657 0-102.027344 45.679687-102.027344 102.03125 0 56.347656 45.679687 102.027343 102.027344 102.027343 56.351562 0 102.03125-45.679687 102.03125-102.027343 0-7.046876-5.710938-12.753907-12.753907-12.753907-7.042968 0-12.753906 5.707031-12.753906 12.753907 0 42.261718-34.257812 76.523437-76.523437 76.523437-42.261719 0-76.523438-34.261719-76.523438-76.523437 0-42.265626 34.261719-76.523438 76.523438-76.523438zm0 0">
+                            </path>
+                            <path
+                                d="m500.199219 179.394531c-2.214844-6.691406-9.433594-10.320312-16.128907-8.105469-6.539062 2.164063-10.179687 9.125-8.230468 15.730469 38.140625 121.457031-29.398438 250.835938-150.855469 288.976563-121.453125 38.140625-250.832031-29.398438-288.972656-150.855469-38.144531-121.457031 29.398437-250.835937 150.851562-288.976563 44.960938-14.117187 93.164063-14.117187 138.121094 0 6.75 2.035157 13.871094-1.785156 15.90625-8.535156 2.003906-6.648437-1.671875-13.675781-8.277344-15.824218-134.863281-42.3125-278.496093 32.714843-320.808593 167.582031-42.3125 134.863281 32.71875 278.496093 167.582031 320.808593 134.867187 42.3125 278.496093-32.714843 320.808593-167.582031 15.648438-49.875 15.648438-103.34375.003907-153.21875zm0 0">
+                            </path>
+                            <path
+                                d="m281.144531 91.117188c.066407-7.261719-5.511719-13.332032-12.753906-13.875-3.808594-.324219-7.621094-.648438-11.53125-.648438-98.613281 0-178.554687 79.941406-178.554687 178.554688 0 98.609374 79.941406 178.550781 178.554687 178.550781 98.609375 0 178.550781-79.941407 178.550781-178.550781 0-4.613282-.28125-9.222657-.847656-13.800782-1.019531-7-7.519531-11.847656-14.519531-10.828125-7 1.015625-11.847657 7.519531-10.832031 14.519531.039062.265626.085937.527344.140624.792969.277344 3.089844.550782 6.152344.550782 9.308594.003906 84.527344-68.515625 153.046875-153.039063 153.054687-84.527343.003907-153.046875-68.519531-153.050781-153.042968-.003906-84.523438 68.511719-153.046875 153.039062-153.050782h.003907c3.164062 0 6.230469.273438 9.3125.546876l2.390625.199218c6.664062.285156 12.296875-4.886718 12.578125-11.550781.003906-.0625.003906-.121094.007812-.179687zm0 0">
+                            </path>
+                            <path
+                                d="m333.378906 114.855469v45.734375l-85.539062 85.539062c-5.066406 4.894532-5.207032 12.96875-.3125 18.035156 4.894531 5.066407 12.96875 5.207032 18.035156.3125.105469-.101562.210938-.207031.3125-.3125l85.539062-85.539062h45.734376c3.382812 0 6.625-1.34375 9.019531-3.738281l76.519531-76.523438c4.980469-4.980469 4.980469-13.054687 0-18.035156-2.390625-2.390625-5.632812-3.734375-9.015625-3.734375h-38.261719v-38.261719c0-7.042969-5.710937-12.753906-12.757812-12.75-3.378906 0-6.621094 1.34375-9.011719 3.734375l-76.523437 76.523438c-2.394532 2.390625-3.738282 5.632812-3.738282 9.015625zm25.507813 5.28125 51.015625-51.015625v20.226562c0 7.042969 5.710937 12.753906 12.753906 12.753906h20.226562l-51.015624 51.015626h-32.980469zm0 0">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold">Our Vision</h4>
+                    <p class="text-center max-w-[400px]">To become a trusted, global fashion destination that redefines
+                        modern essentials. We envision a world where style is accessible, self-expression is celebrated,
+                        and fashion feels effortless for everyone — from city streets to family weekends. At Velora, we
+                        aim to lead with creativity, integrity, and a deep understanding.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- +++++++++++++++++++++++++++++++++ PURPOSE SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ SUBSCRIBE SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <section class="py-[80px] bg-[#f7eced]">
+        <div class="flex flex-col items-center justify-center space-y-5 pb-[60px]">
+            <h2 class="text-4xl md:text-5xl font-bold text-center">Get 10% Off on Your First Order</h2>
+            <p class="text-center md:text-lg">Plus exclusive access to product drops, style tips, and insider deals.
+            </p>
+        </div>
+        <div class="flex items-center justify-center">
+            <div class="flex items-center gap-4 md:flex-row flex-col w-[622px] max-w-full mx-auto px-5">
+                <input type="email" placeholder="ENTER YOUR EMAIL*"
+                    class="py-3 px-3 w-full border border-red-500 outline-red-500 rounded-[5px]">
+                <button
+                    class="text-lg bg-red-500 rounded-[5px] px-3 py-3 text-white font-[500] md:w-1/2 w-full cursor-pointer hover:bg-red-600 transition duration-300">SUBSCRIBE</button>
+            </div>
+        </div>
+        <div class="container mx-auto px-5">
+            <div class="grid__image grid grid-cols-2 md:grid-cols-4 gap-8 pt-[50px]">
+                <div class="glass1 rounded-[24px]">
+                    <div>
+                        <img class="rounded-[24px] w-full h-auto" src="/Images/footer-img-01.jpg" alt="">
+                    </div>
+                </div>
+                <div class="glass2 rounded-[24px]">
+                    <div>
+                        <img class="rounded-[24px] w-full h-auto" src="/Images/footer-img-02.jpg" alt="">
+                    </div>
+                </div>
+                <div class="glass3 rounded-[24px]">
+                    <div>
+                        <img class="rounded-[24px] w-full h-auto" src="/Images/footer-img-03.jpg" alt="">
+                    </div>
+                </div>
+                <div class="glass4 rounded-[24px]">
+                    <div>
+                        <img class="rounded-[24px] w-full h-auto" src="/Images/footer-img-04.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center justify-center gap-3 pt-[50px]">
+            <div class="text-[40px] text-red-500">
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+            <span class="font-bold text-black text-lg">Follow us</span>
+            <p>@VeloraStyle</p>
+        </div>
+    </section>
+    <!-- +++++++++++++++++++++++++++++++++ SUBSCRIBE SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ FOOTER SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <footer class="py-[80px] bg-black text-white">
+        <div class="container mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8 border-b-2 border-white pb-10">
+                <div class="glass">
+                    <div class="logo w-[100px] mb-3">
+                        <a href="">
+                            <img src="/Images/footer-logo.svg" alt="">
+                        </a>
+                    </div>
+                    <p class="mb-5">Classic looks for Men,<br> Women & Kids.</p>
+                    <ul class="flex items-center space-x-2.5">
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-instagram"></i>
+                        </li>
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </li>
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </li>
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">Quick Links</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg text-red-500" href="index.html">Home</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="shop.html">Shop</a>
+                        </li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="about.html" target="_blank">About</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="contact.html" target="_blank">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">Shop</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Mens
+                                Wear</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Womens
+                                Wear</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Kids
+                                Wear</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">Help</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="">FAQ’s</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Return
+                                Policy</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Order
+                                Status</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Shipping
+                                & Delivery</a></li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">My Profile</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">My
+                                Account</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Track
+                                Order</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">My
+                                Cart</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Order
+                                History</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-[40px] flex flex-col md:flex-row space-y-3 md:space-y-0 items-center justify-between">
+                <p class="md:text-lg font-[500] text-center">Copyright © 2025 Clothing Store All rights reserved</p>
+                <div>
+                    <img src="/Images/payments.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- +++++++++++++++++++++++++++++++++ FOOTER SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

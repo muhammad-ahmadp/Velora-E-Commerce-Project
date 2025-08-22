@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career - Clothing Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
+    <!-- font awesome cdn link for all icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="text-[16px] font-[400] bg-[#ffffff] text-black">
+    <!-- +++++++++++++++++++++++++++++++++ NAVBAR SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <header class="bg-white shadow-lg">
+        <div class="container mx-auto px-5">
+            <nav class="flex items-center justify-between py-6">
+                <div class="logo">
+                    <a href="">
+                        <img src="/Images/header-logo.svg" alt="">
+                    </a>
+                </div>
+                <button class="menu-toggle border border-red-500 rounded-[5px] p-[2px] md:hidden" id="menu-btn">
+                    <span class="hamburger">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                            <path fill-rule="evenodd"
+                                d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    <span class="close">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                            <path fill-rule="evenodd"
+                                d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+                    </span> <!-- × -->
+                </button>
+                <ul class="md:flex items-center gap-6 hidden">
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300 text-red-500"
+                            href="index.html">Home</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="shop.html"
+                            target="_blank">Shop</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300"
+                            href="blog.html">Blog</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="about.html"
+                            target="_blank">About</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="career.html"
+                            target="_blank">Carrers</a>
+                    </li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="faqs.html" target="_blank">FAQ's</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="contact.html"
+                            target="_blank">Contact</a>
+                    </li>
+                </ul>
+                <div class="icons md:flex hidden items-center gap-4">
+                    <button class="cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        </svg>
+                    </button>
+                    <button class="Bag-icon cursor-pointer relative transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                        </svg>
+                        <span
+                            class="absolute top-[-7px] left-[20px] bg-black w-[18px] h-[18px] rounded-full text-white flex items-center justify-center text-sm transition duration-300">0</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <div class="py-4 md:flex hidden items-center justify-center bg-black text-white">
+            <p>Get 15% off on your first order</p>
+        </div>
+    </header>
+    <div class="mobile__menu bg-white shadow-lg md:hidden" id="mobileMenu">
+        <ul class="flex flex-col space-y-7 py-7 px-2">
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300 text-red-500"
+                    href="index.html">Home <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="shop.html">Shop <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="blog.html">Blog <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="about.html" target="_blank">About <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="career.html" target="_blank">Carrers <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="faqs.html" target="_blank">FAQ's <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="contact.html" target="_blank">Contact <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- +++++++++++++++++++++++++++++++++ NAVBAR SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+    <section class="pt-[120px] pb-[80px] px-10 bg-[#f7eced] flex flex-col items-center justify-center space-y-4">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold">Careers at Velora</h1>
+        <p class="md:text-lg font-[500] text-center">At Velora, you’ll find purpose in your work, passion in your
+            teammates, and growth in every step.</p>
+    </section>
+
+
+
+    <section class="py-[100px]">
+        <div class="container mx-auto px-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div>
+                    <div>
+                        <img class="w-full h-full max-w-full rounded-[32px]"
+                            src="/Images/pexels-cottonbro-4622225-1536x1024.jpg" alt="">
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-10 pt-[10px] w-full max-w-full">
+                    <h2 class="text-4xl md:text-5xl font-bold text-center md:text-left">Grow Your Career with Us</h2>
+                    <p>Whether you’re helping a customer find their perfect fit or designing our next best-selling
+                        piece, your work matters here. We value creativity, collaboration, and people who bring fresh
+                        ideas to the table.</p>
+                    <div class="flex items-center space-x-16 flex-wrap space-y-2 md:space-y-0">
+                        <div class="flex items-center space-x-2">
+                            <div
+                                class="w-[35px] h-[35px] rounded-full bg-red-500 text-white flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span>Fun</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div
+                                class="w-[35px] h-[35px] rounded-full bg-red-500 text-white flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span>Flexibility</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-10 md:space-x-12 flex-wrap space-y-2 md:space-y-0">
+                        <div class="flex items-center space-x-2">
+                            <div
+                                class="w-[35px] h-[35px] rounded-full bg-red-500 text-white flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span>ESPOS</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div
+                                class="w-[35px] h-[35px] rounded-full bg-red-500 text-white flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span>Growth</span>
+                        </div>
+                    </div>
+                    <button
+                        class="bg-red-500 py-4 px-6 rounded-full text-white text-lg font-[500] md:w-1/2 w-full cursor-pointer hover:bg-red-400 transition duration-300">VIEW
+                        OPEN POSITION</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-[100px] bg-[#f7eced]">
+        <div class="flex flex-col items-center justify-center space-y-2.5">
+            <h2 class="text-4xl md:text-5xl font-bold">Life at Velora​</h2>
+            <p class="text-center md:text-lg font-[500] max-w-5xl">Get a behind-the-scenes look at what it’s like to
+                work at Velora. From collaborative design sessions to launch-day celebrations, we believe in doing great
+                work — and enjoying the journey along the way.</p>
+        </div>
+        <div class="container mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-[50px]">
+                <div class="glass rounded-[32px] border-2 border-black overflow-hidden">
+                    <div class="h-full bg-cover w-full rounded-[32px]">
+                        <img class="w-full h-full max-w-full bg-cover overflow-hidden" src="/Images/About-Pic-1.png"
+                            alt="">
+                    </div>
+                </div>
+                <div class="glass flex flex-col space-y-6 overflow-hidden">
+                    <div class="border-2 border-black rounded-[32px]">
+                        <div class="w-full h-full bg-cover overflow-hidden rounded-[32px]">
+                            <img class="w-full max-w-full h-full overflow-hidden" src="/Images/About-Pic-2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="border-2 border-black rounded-[32px]">
+                        <div class="w-full h-full bg-cover overflow-hidden rounded-[32px]">
+                            <img class="w-full max-w-full h-full overflow-hidden" src="/Images/About-Pic-3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="glass rounded-[32px] border-2 border-black overflow-hidden">
+                    <div class="h-full bg-cover w-full rounded-[32px]">
+                        <img class="w-full h-full max-w-full bg-cover overflow-hidden" src="/Images/About-Pic-4.png"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="py-[100px]">
+        <div class="flex flex-col items-center justify-center space-y-2.5">
+            <h2 class="text-4xl md:text-5xl font-bold">Perks & Benefits</h2>
+            <p class="text-center md:text-lg font-[500]">Where Great Work Meets Great Rewards</p>
+        </div>
+        <div class="container mx-auto px-5">
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-8 pt-[50px]">
+                <div class="glass flex flex-col items-center justify-center space-y-4">
+                    <div class="w-[50px] h-[50px] rounded-full bg-red-500 flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-7">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-center">Employee Discounts</h2>
+                    <p class="text-center">Enjoy exclusive discounts & more on Velora styles.</p>
+                </div>
+                <div class="glass flex flex-col items-center justify-center space-y-4">
+                    <div class="w-[50px] h-[50px] rounded-full bg-red-500 flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-7">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-center">Flexible Work</h2>
+                    <p class="text-center">Choose remote, hybrid, or in-office roles that suit your lifestyle .</p>
+                </div>
+                <div class="glass flex flex-col items-center justify-center space-y-4">
+                    <div class="w-[50px] h-[50px] rounded-full bg-red-500 flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-7">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-center">Career Growth</h2>
+                    <p class="text-center">Learn, grow, and thrive with clear paths to advancement.</p>
+                </div>
+                <div class="glass flex flex-col items-center justify-center space-y-4">
+                    <div class="w-[50px] h-[50px] rounded-full bg-red-500 flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-7">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-center">Wellness Support</h2>
+                    <p class="text-center">Prioritize well-being with access to wellness tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="py-[100px] bg-[#f7eced]">
+        <div class="container mx-auto px-5">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="flex flex-col space-y-2.5 w-full">
+                    <h2 class="text-4xl md:text-6xl font-bold">Ready to Join Us?</h2>
+                    <p>Let’s Make Something Great Together</p>
+                </div>
+                <div class="flex flex-col space-y-4 w-full">
+                    <div class="py-8 border-b-2 border-gray-300 flex items-end justify-between">
+                        <div class="flex flex-col space-y-3">
+                            <h2 class="text-2xl font-bold">Graphic Designer – Apparel</h2>
+                            <p>Remote or NYC</p>
+                        </div>
+                        <div class="text-red-500 text-4xl"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                    <div class="py-8 border-b-2 border-gray-300 flex items-center justify-between">
+                        <div class="flex flex-col space-y-3">
+                            <h2 class="text-2xl font-bold">Customer Experience Associate</h2>
+                            <p>Full-Time, Remote</p>
+                        </div>
+                        <div class="text-red-500 text-4xl"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                    <div class="py-8 border-b-2 border-gray-300 flex items-center justify-between">
+                        <div class="flex flex-col space-y-3">
+                            <h2 class="text-2xl font-bold">Warehouse Coordinator</h2>
+                            <p>Los Angeles</p>
+                        </div>
+                        <div class="text-red-500 text-4xl"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                    <div class="py-8 border-b-2 border-gray-300 flex items-center justify-between">
+                        <div class="flex flex-col space-y-3">
+                            <h2 class="text-2xl font-bold">Social Media Manager</h2>
+                            <p>Full-Time, Hybrid</p>
+                        </div>
+                        <div class="text-red-500 text-4xl"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- +++++++++++++++++++++++++++++++++ FOOTER SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <footer class="py-[80px] bg-black text-white">
+        <div class="container mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8 border-b-2 border-white pb-10">
+                <div class="glass">
+                    <div class="logo w-[100px] mb-3">
+                        <a href="">
+                            <img src="/Images/footer-logo.svg" alt="">
+                        </a>
+                    </div>
+                    <p class="mb-5">Classic looks for Men,<br> Women & Kids.</p>
+                    <ul class="flex items-center space-x-2.5">
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-instagram"></i>
+                        </li>
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </li>
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </li>
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">Quick Links</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg text-red-500" href="index.html">Home</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="shop.html">Shop</a>
+                        </li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="about.html" target="_blank">About</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="contact.html" target="_blank">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">Shop</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Mens
+                                Wear</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Womens
+                                Wear</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Kids
+                                Wear</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">Help</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="">FAQ’s</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Return
+                                Policy</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Order
+                                Status</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Shipping
+                                & Delivery</a></li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">My Profile</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">My
+                                Account</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Track
+                                Order</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">My
+                                Cart</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Order
+                                History</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-[40px] flex flex-col md:flex-row space-y-3 md:space-y-0 items-center justify-between">
+                <p class="md:text-lg font-[500] text-center">Copyright © 2025 Clothing Store All rights reserved</p>
+                <div>
+                    <img src="/Images/payments.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- +++++++++++++++++++++++++++++++++ FOOTER SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+</body>
+
+</html>

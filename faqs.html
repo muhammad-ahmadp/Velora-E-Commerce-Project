@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ's Clothing Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
+    <!-- font awesome cdn link for all icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="text-[16px] font-[400] bg-[#ffffff] text-black">
+
+    <!-- +++++++++++++++++++++++++++++++++ NAVBAR SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <header class="bg-white shadow-lg">
+        <div class="container mx-auto px-5">
+            <nav class="flex items-center justify-between py-6">
+                <div class="logo">
+                    <a href="">
+                        <img src="/Images/header-logo.svg" alt="">
+                    </a>
+                </div>
+                <button class="menu-toggle border border-red-500 rounded-[5px] p-[2px] md:hidden" id="menu-btn">
+                    <span class="hamburger">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                            <path fill-rule="evenodd"
+                                d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    <span class="close">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                            <path fill-rule="evenodd"
+                                d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+                    </span> <!-- × -->
+                </button>
+                <ul class="md:flex items-center gap-6 hidden">
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300 text-red-500"
+                            href="index.html">Home</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="shop.html"
+                            target="_blank">Shop</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300"
+                            href="blog.html">Blog</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="about.html"
+                            target="_blank">About</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="career.html"
+                            target="_blank">Carrers</a>
+                    </li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="faqs.html"
+                            target="_blank">FAQ's</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="contact.html"
+                            target="_blank">Contact</a>
+                    </li>
+                </ul>
+                <div class="icons md:flex hidden items-center gap-4">
+                    <button class="cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        </svg>
+                    </button>
+                    <button class="Bag-icon cursor-pointer relative transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                        </svg>
+                        <span
+                            class="absolute top-[-7px] left-[20px] bg-black w-[18px] h-[18px] rounded-full text-white flex items-center justify-center text-sm transition duration-300">0</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <div class="py-4 md:flex hidden items-center justify-center bg-black text-white">
+            <p>Get 15% off on your first order</p>
+        </div>
+    </header>
+    <div class="mobile__menu bg-white shadow-lg md:hidden" id="mobileMenu">
+        <ul class="flex flex-col space-y-7 py-7 px-2">
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300 text-red-500"
+                    href="index.html">Home <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="shop.html">Shop <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="blog.html">Blog <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="about.html" target="_blank">About <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="career.html" target="_blank">Carrers <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="faqs.html" target="_blank">FAQ's <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="contact.html" target="_blank">Contact <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- +++++++++++++++++++++++++++++++++ NAVBAR SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+    <section
+        class="pt-[120px] pb-[80px] px-10 bg-[#f7eced] flex flex-col items-center justify-center space-y-4 text-center">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold">Frequently Asked Questions</h1>
+        <p class="md:text-lg font-[500] text-center">Explore our most commonly asked questions below.</p>
+    </section>
+
+
+    <section class="Question__section py-[100px]">
+        <div class="container mx-auto px-5">
+            <div>
+                <h2 class="mb-6 text-2xl md:text-3xl font-bold">Returns & Exchanges</h2>
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item border-b border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="faq-question w-full cursor-pointer flex justify-between items-center p-5 text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors">
+                            <span>What is your return policy?</span>
+                            <i
+                                class="faq-toggle fas fa-chevron-down text-primary transition-transform cursor-pointer"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-5 bg-gray-50 text-gray-700">
+                                <p>We accept returns within 14 days of delivery on unworn, unwashed items with original
+                                    tags. Some items like final sale or underwear are non-returnable.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item border-b border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="faq-question cursor-pointer w-full flex justify-between items-center p-5 text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors">
+                            <span>How do I start a return or exchange?</span>
+                            <i
+                                class="faq-toggle fas fa-chevron-down text-primary transition-transform cursor-pointer"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-5 bg-gray-50 text-gray-700">
+                                <p>Just head to our Returns Portal, enter your order number and email, and follow the
+                                    steps. You’ll receive a prepaid return label if eligible.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item border-b border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="faq-question cursor-pointer w-full flex justify-between items-center p-5 text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors">
+                            <span>When will I get my refund?</span>
+                            <i
+                                class="faq-toggle fas fa-chevron-down text-primary transition-transform cursor-pointer"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-5 bg-gray-50 text-gray-700">
+                                <p>Once we receive and inspect your return, refunds are processed within 5–7 business
+                                    days to your original payment method.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item border-b border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="faq-question cursor-pointer w-full flex justify-between items-center p-5 text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors">
+                            <span>Can I exchange an item for a different size?</span>
+                            <i
+                                class="faq-toggle fas fa-chevron-down text-primary transition-transform cursor-pointer"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-5 bg-gray-50 text-gray-700">
+                                <p>Absolutely! If the size you need is available, we’ll process an exchange once your
+                                    original item is received.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+    <section class="Question__section py-[50px]">
+        <div class="container mx-auto px-5">
+            <div>
+                <h2 class="mb-6 text-2xl md:text-3xl font-bold">Ordering & Payment</h2>
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item border-b border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="faq-question w-full cursor-pointer flex justify-between items-center p-5 text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors">
+                            <span>What payment methods do you accept?</span>
+                            <i
+                                class="faq-toggle fas fa-chevron-down text-primary transition-transform cursor-pointer"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-5 bg-gray-50 text-gray-700">
+                                <p>We accept Visa, Mastercard, AMEX, PayPal, Apple Pay, Google Pay, and Velora gift
+                                    cards.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item border-b border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="faq-question cursor-pointer w-full flex justify-between items-center p-5 text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors">
+                            <span>Can I apply a promo code or gift card at checkout?</span>
+                            <i
+                                class="faq-toggle fas fa-chevron-down text-primary transition-transform cursor-pointer"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-5 bg-gray-50 text-gray-700">
+                                <p>Yes! You can enter your promo code or gift card in the designated field during
+                                    checkout before payment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item border-b border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="faq-question cursor-pointer w-full flex justify-between items-center p-5 text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors">
+                            <span>Can I modify or cancel my order after placing it?</span>
+                            <i
+                                class="faq-toggle fas fa-chevron-down text-primary transition-transform cursor-pointer"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-5 bg-gray-50 text-gray-700">
+                                <p>Orders are processed quickly, but if you contact us within 1 hour of purchase, we’ll
+                                    do our best to accommodate changes or cancellations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item border-b border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="faq-question cursor-pointer w-full flex justify-between items-center p-5 text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors">
+                            <span>Do you offer pre-orders?</span>
+                            <i
+                                class="faq-toggle fas fa-chevron-down text-primary transition-transform cursor-pointer"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-5 bg-gray-50 text-gray-700">
+                                <p>Yes, for select items. Pre-order details (estimated shipping date, charges, etc.)
+                                    will be clearly noted on the product page.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+    <section class="Question__section py-[50px]">
+        <div class="container mx-auto px-5">
+            <div>
+                <h2 class="mb-6 text-2xl md:text-3xl font-bold">Shipping & Delivery</h2>
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item border-b border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="faq-question w-full cursor-pointer flex justify-between items-center p-5 text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors">
+                            <span>Where do you ship?</span>
+                            <i
+                                class="faq-toggle fas fa-chevron-down text-primary transition-transform cursor-pointer"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-5 bg-gray-50 text-gray-700">
+                                <p>We currently ship across the U.S. and select international countries. Shipping
+                                    options and costs are calculated at checkout.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item border-b border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="faq-question cursor-pointer w-full flex justify-between items-center p-5 text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors">
+                            <span>How long does shipping take?</span>
+                            <i
+                                class="faq-toggle fas fa-chevron-down text-primary transition-transform cursor-pointer"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-5 bg-gray-50 text-gray-700">
+                                <p>Standard shipping takes 3–7 business days. Expedited options are available at
+                                    checkout.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item border-b border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="faq-question cursor-pointer w-full flex justify-between items-center p-5 text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors">
+                            <span>How can I track my order?</span>
+                            <i
+                                class="faq-toggle fas fa-chevron-down text-primary transition-transform cursor-pointer"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-5 bg-gray-50 text-gray-700">
+                                <p>You’ll receive a tracking link via email once your order ships. You can also track
+                                    your order anytime through your Velora account.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item border-b border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="faq-question cursor-pointer w-full flex justify-between items-center p-5 text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors">
+                            <span>What if my package is lost or delayed?</span>
+                            <i
+                                class="faq-toggle fas fa-chevron-down text-primary transition-transform cursor-pointer"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-5 bg-gray-50 text-gray-700">
+                                <p>If your tracking hasn’t updated in 5+ days or your package is missing, reach out to
+                                    our Support Team and we’ll help resolve it ASAP.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+    <section class="Question__section py-[50px]">
+        <div class="container mx-auto px-5">
+            <div>
+                <h2 class="mb-6 text-2xl md:text-3xl font-bold">Sizing & Fit</h2>
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item border-b border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="faq-question w-full cursor-pointer flex justify-between items-center p-5 text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors">
+                            <span>How do I know what size to order?</span>
+                            <i
+                                class="faq-toggle fas fa-chevron-down text-primary transition-transform cursor-pointer"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-5 bg-gray-50 text-gray-700">
+                                <p>Each product page includes a detailed size guide and fit notes. We also include model
+                                    sizing for reference.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item border-b border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="faq-question cursor-pointer w-full flex justify-between items-center p-5 text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors">
+                            <span>Do your clothes run true to size?</span>
+                            <i
+                                class="faq-toggle fas fa-chevron-down text-primary transition-transform cursor-pointer"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-5 bg-gray-50 text-gray-700">
+                                <p>Most of our pieces run true to size, but we recommend checking individual product
+                                    descriptions for specific fit guidance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item border-b border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="faq-question cursor-pointer w-full flex justify-between items-center p-5 text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors">
+                            <span>What if I’m between sizes?</span>
+                            <i
+                                class="faq-toggle fas fa-chevron-down text-primary transition-transform cursor-pointer"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-5 bg-gray-50 text-gray-700">
+                                <p>If you're between sizes, we suggest sizing up for a more relaxed fit or down for a
+                                    snug fit — and always feel free to contact us for help!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item border-b border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="faq-question cursor-pointer w-full flex justify-between items-center p-5 text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors">
+                            <span>Can I return or exchange if it doesn’t fit?</span>
+                            <i
+                                class="faq-toggle fas fa-chevron-down text-primary transition-transform cursor-pointer"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="p-5 bg-gray-50 text-gray-700">
+                                <p>Yes! We want you to love the way it fits. You can return or exchange eligible items
+                                    within 14 days of delivery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ SUBSCRIBE SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <section class="py-[100px] bg-[#f7eced]">
+        <div class="flex flex-col items-center justify-center space-y-5 pb-[60px]">
+            <h2 class="text-4xl md:text-5xl font-bold text-center">Get 10% Off on Your First Order</h2>
+            <p class="text-center md:text-lg">Plus exclusive access to product drops, style tips, and insider deals.
+            </p>
+        </div>
+        <div class="flex items-center justify-center">
+            <div class="flex items-center gap-4 md:flex-row flex-col w-[622px] max-w-full mx-auto px-5">
+                <input type="email" placeholder="ENTER YOUR EMAIL*"
+                    class="py-3 px-3 w-full border border-red-500 outline-red-500 rounded-[5px]">
+                <button
+                    class="text-lg bg-red-500 rounded-[5px] px-3 py-3 text-white font-[500] md:w-1/2 w-full cursor-pointer hover:bg-red-600 transition duration-300">SUBSCRIBE</button>
+            </div>
+        </div>
+        <div class="container mx-auto px-5">
+            <div class="grid__image grid grid-cols-2 md:grid-cols-4 gap-8 pt-[50px]">
+                <div class="glass1 rounded-[24px]">
+                    <div>
+                        <img class="rounded-[24px] w-full h-auto" src="/Images/footer-img-01.jpg" alt="">
+                    </div>
+                </div>
+                <div class="glass2 rounded-[24px]">
+                    <div>
+                        <img class="rounded-[24px] w-full h-auto" src="/Images/footer-img-02.jpg" alt="">
+                    </div>
+                </div>
+                <div class="glass3 rounded-[24px]">
+                    <div>
+                        <img class="rounded-[24px] w-full h-auto" src="/Images/footer-img-03.jpg" alt="">
+                    </div>
+                </div>
+                <div class="glass4 rounded-[24px]">
+                    <div>
+                        <img class="rounded-[24px] w-full h-auto" src="/Images/footer-img-04.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center justify-center gap-3 pt-[50px]">
+            <div class="text-[40px] text-red-500">
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+            <span class="font-bold text-black text-lg">Follow us</span>
+            <p>@VeloraStyle</p>
+        </div>
+    </section>
+    <!-- +++++++++++++++++++++++++++++++++ SUBSCRIBE SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ FOOTER SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <footer class="py-[80px] bg-black text-white">
+        <div class="container mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8 border-b-2 border-white pb-10">
+                <div class="glass">
+                    <div class="logo w-[100px] mb-3">
+                        <a href="">
+                            <img src="/Images/footer-logo.svg" alt="">
+                        </a>
+                    </div>
+                    <p class="mb-5">Classic looks for Men,<br> Women & Kids.</p>
+                    <ul class="flex items-center space-x-2.5">
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-instagram"></i>
+                        </li>
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </li>
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </li>
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">Quick Links</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg text-red-500" href="index.html">Home</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="shop.html">Shop</a>
+                        </li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="about.html" target="_blank">About</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="contact.html" target="_blank">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">Shop</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Mens
+                                Wear</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Womens
+                                Wear</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Kids
+                                Wear</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">Help</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="faqs.html"
+                                target="_blank">FAQ’s</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Return
+                                Policy</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Order
+                                Status</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Shipping
+                                & Delivery</a></li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">My Profile</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">My
+                                Account</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Track
+                                Order</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">My
+                                Cart</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Order
+                                History</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-[40px] flex flex-col md:flex-row space-y-3 md:space-y-0 items-center justify-between">
+                <p class="md:text-lg font-[500] text-center">Copyright © 2025 Clothing Store All rights reserved</p>
+                <div>
+                    <img src="/Images/payments.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- +++++++++++++++++++++++++++++++++ FOOTER SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

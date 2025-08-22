@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Clothing Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
+    <!-- font awesome cdn link for all icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="text-[16px] font-[400] bg-[#ffffff] text-black">
+    <!-- +++++++++++++++++++++++++++++++++ NAVBAR SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <header class="bg-white shadow-lg">
+        <div class="container mx-auto px-5">
+            <nav class="flex items-center justify-between py-6">
+                <div class="logo">
+                    <a href="">
+                        <img src="/Images/header-logo.svg" alt="">
+                    </a>
+                </div>
+                <button class="menu-toggle border border-red-500 rounded-[5px] p-[2px] md:hidden" id="menu-btn">
+                    <span class="hamburger">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                            <path fill-rule="evenodd"
+                                d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    <span class="close">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                            <path fill-rule="evenodd"
+                                d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+                    </span> <!-- × -->
+                </button>
+                <ul class="md:flex items-center gap-6 hidden">
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300 text-red-500"
+                            href="index.html">Home</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="shop.html"
+                            target="_blank">Shop</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300"
+                            href="blog.html">Blog</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="about.html"
+                            target="_blank">About</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="career.html"
+                            target="_blank">Carrers</a>
+                    </li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="faqs.html"
+                            target="_blank">FAQ's</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="contact.html"
+                            target="_blank">Contact</a>
+                    </li>
+                </ul>
+                <div class="icons md:flex hidden items-center gap-4">
+                    <button class="cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        </svg>
+                    </button>
+                    <button class="Bag-icon cursor-pointer relative transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                        </svg>
+                        <span
+                            class="absolute top-[-7px] left-[20px] bg-black w-[18px] h-[18px] rounded-full text-white flex items-center justify-center text-sm transition duration-300">0</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <div class="py-4 md:flex hidden items-center justify-center bg-black text-white">
+            <p>Get 15% off on your first order</p>
+        </div>
+    </header>
+    <div class="mobile__menu bg-white shadow-lg md:hidden" id="mobileMenu">
+        <ul class="flex flex-col space-y-7 py-7 px-2">
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300 text-red-500"
+                    href="index.html">Home <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="shop.html">Shop <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="blog.html">Blog <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="about.html" target="_blank">About <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="career.html" target="_blank">Carrers <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="faqs.html" target="_blank">FAQ's <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="contact.html" target="_blank">Contact <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- +++++++++++++++++++++++++++++++++ NAVBAR SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ HERO SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <section class="hero relative">
+        <div class="absolute inset-0 bg-black/70"></div>
+        <div class="hero-content flex flex-col space-y-7 items-center justify-center z-10">
+            <h1 class="text-white text-4xl md:text-6xl lg:text-7xl font-[900] text-center">Timeless
+                Fashion for the <br>
+                Modern Wardrobe</h1>
+            <p class="text-white max-w-xl text-center font-[500] md:text-xl">Discover timeless fashion for Men, Women,
+                and Kids – crafted for
+                comfort, designed for confidence.</p>
+            <a class="hero_btn uppercase py-3 inline-block px-4 rounded-full bg-red-500 text-white text-center hover:bg-red-600 transition duration-300 cursor-pointer font-[500]"
+                href="">Explore
+                the Collection</a>
+        </div>
+    </section>
+    <!-- +++++++++++++++++++++++++++++++++ HERO SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ ARRIVAL SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <section class="arrival__section py-[80px]">
+        <div class="container mx-auto px-5">
+            <div class="flex justify-between flex-wrap space-y-2">
+                <div class="flex flex-col space-y-2">
+                    <h2 class="text-4xl md:text-5xl font-bold">New Arrivals</h2>
+                    <p class="md:text-lg">Be the first to wear this season’s latest looks. Handpicked and freshly
+                        styled.</p>
+                </div>
+                <div>
+                    <button
+                        class="uppercase py-3 px-6 rounded-full border border-red-500 text-red-500 text-center hover:bg-red-500 hover:text-white transition duration-300 cursor-pointer font-[500]">see
+                        what's new</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8 pt-[50px]">
+                <div class="glass1">
+                    <div class="cart_image relative overflow-hidden mb-3 cursor-pointer">
+                        <img class="h-full w-full max-w-full" src="/Images/1-600x698.png" alt="">
+                        <div class="cart_icon absolute top-5 right-5 flex flex-col space-y-5">
+                            <span
+                                class="bg-[#FFFFFF] text-[#191516] cursor-pointer hover:bg-[#faf8f8f6] hover:text-red-400 transition duration-300 shadow-lg w-[40px] h-[40px] rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                </svg>
+                            </span>
+                            <span
+                                class="bg-[#FFFFFF] text-[#191516] cursor-pointer hover:bg-[#faf8f8f6] hover:text-red-400 transition duration-300 shadow-lg w-[40px] h-[40px] rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <a href="" class="text-xl font-semibold mb-1.5 md:mb-3">Flowline Dresses</a>
+                        <span class="text-sm text-gray-500">Woman</span>
+                        <div class="flex items-center gap-1 mb-3">
+                            <span>$200.00</span>
+                            <del>$250.00</del>
+                        </div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <div
+                                class="border border-gray-600 py-[4px] px-[6px] hover:border-[#111111] transition duration-300 cursor-pointer rounded flex items-center justify-center ">
+                                M</div>
+                            <div
+                                class="border border-gray-600 py-[4px] px-[6px] hover:border-[#111111] transition duration-300 cursor-pointer rounded flex items-center justify-center ">
+                                L</div>
+                            <div
+                                class="border border-gray-600 py-[4px] px-[6px] hover:border-[#111111] transition duration-300 cursor-pointer rounded flex items-center justify-center ">
+                                XL</div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="border border-white p-[1px] rounded-[3px] hover:border-black transition duration-300">
+                                <div class="min-w-[24px] min-h-[24px] bg-[#8f3084] rounded-[3px] cursor-pointer"></div>
+                            </div>
+                            <div
+                                class="border border-white p-[1px] rounded-[3px] hover:border-black transition duration-300">
+                                <div class="min-w-[24px] min-h-[24px] bg-[#29808a] rounded-[3px] cursor-pointer"></div>
+                            </div>
+                            <div
+                                class="border border-white p-[1px] rounded-[3px] hover:border-black transition duration-300">
+                                <div class="min-w-[24px] min-h-[24px] bg-[#7d922f] rounded-[3px] cursor-pointer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass2">
+                    <div class="cart_image relative overflow-hidden cursor-pointer">
+                        <img class="w-full h-full max-w-full" src="/Images/polo-tshirt-600x698.jpg" alt="">
+                        <div class="cart_icon absolute top-5 right-5 flex flex-col space-y-5">
+                            <span
+                                class="bg-[#FFFFFF] text-[#191516] cursor-pointer hover:bg-[#faf8f8f6] hover:text-red-400 transition duration-300 shadow-lg w-[40px] h-[40px] rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                </svg>
+                            </span>
+                            <span
+                                class="bg-[#FFFFFF] text-[#191516] cursor-pointer hover:bg-[#faf8f8f6] hover:text-red-400 transition duration-300 shadow-lg w-[40px] h-[40px] rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <a href="" class="text-xl font-semibold mb-1.5 md:mb-3">Essential Polos</a>
+                        <span class="text-sm text-gray-500">Men</span>
+                        <div class="flex items-center gap-1 mb-3">
+                            <span>$100.00</span>
+                            <del>$150.00</del>
+                        </div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <div
+                                class="border border-gray-600 py-[4px] px-[6px] hover:border-[#111111] transition duration-300 cursor-pointer rounded flex items-center justify-center ">
+                                M</div>
+                            <div
+                                class="border border-gray-600 py-[4px] px-[6px] hover:border-[#111111] transition duration-300 cursor-pointer rounded flex items-center justify-center ">
+                                L</div>
+                            <div
+                                class="border border-gray-600 py-[4px] px-[6px] hover:border-[#111111] transition duration-300 cursor-pointer rounded flex items-center justify-center ">
+                                XL</div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="border border-white p-[1px] rounded-[3px] hover:border-black transition duration-300">
+                                <div class="min-w-[24px] min-h-[24px] bg-[#7a6f98] rounded-[3px] cursor-pointer"></div>
+                            </div>
+                            <div
+                                class="border border-white p-[1px] rounded-[3px] hover:border-black transition duration-300">
+                                <div class="min-w-[24px] min-h-[24px] bg-[#707070] rounded-[3px] cursor-pointer"></div>
+                            </div>
+                            <div
+                                class="border border-white p-[1px] rounded-[3px] hover:border-black transition duration-300">
+                                <div class="min-w-[24px] min-h-[24px] bg-[#979d6d] rounded-[3px] cursor-pointer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass3">
+                    <div class="cart_image relative overflow-hidden cursor-pointer">
+                        <img class="w-full h-full max-w-full" src="/Images/cream-tshirt-600x698.jpg" alt="">
+                        <div class="cart_icon absolute top-5 right-5 flex flex-col space-y-5">
+                            <span
+                                class="bg-[#FFFFFF] text-[#191516] cursor-pointer hover:bg-[#faf8f8f6] hover:text-red-400 transition duration-300 shadow-lg w-[40px] h-[40px] rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                </svg>
+                            </span>
+                            <span
+                                class="bg-[#FFFFFF] text-[#191516] cursor-pointer hover:bg-[#faf8f8f6] hover:text-red-400 transition duration-300 shadow-lg w-[40px] h-[40px] rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
+                            </span>
+                        </div>
+                        <span
+                            class="absolute top-5 left-5 py-2 px-4.5 rounded-full bg-red-500 text-white text-sm">Sale!</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <a href="" class="text-xl font-semibold mb-1.5 md:mb-3">Cream T-Shirt</a>
+                        <span class="text-sm text-gray-500">Men</span>
+                        <div class="flex items-center gap-1 mb-3">
+                            <span>$70.00</span>
+                            <del>$90.00</del>
+                        </div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <div
+                                class="border border-gray-600 py-[4px] px-[6px] hover:border-[#111111] transition duration-300 cursor-pointer rounded flex items-center justify-center ">
+                                M</div>
+                            <div
+                                class="border border-gray-600 py-[4px] px-[6px] hover:border-[#111111] transition duration-300 cursor-pointer rounded flex items-center justify-center ">
+                                L</div>
+                            <div
+                                class="border border-gray-600 py-[4px] px-[6px] hover:border-[#111111] transition duration-300 cursor-pointer rounded flex items-center justify-center ">
+                                XL</div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="border border-white p-[1px] rounded-[3px] hover:border-black transition duration-300">
+                                <div class="min-w-[24px] min-h-[24px] bg-[#ac7ca1] rounded-[3px] cursor-pointer"></div>
+                            </div>
+                            <div
+                                class="border border-white p-[1px] rounded-[3px] hover:border-black transition duration-300">
+                                <div class="min-w-[24px] min-h-[24px] bg-[#7b8eab] rounded-[3px] cursor-pointer"></div>
+                            </div>
+                            <div
+                                class="border border-white p-[1px] rounded-[3px] hover:border-black transition duration-300">
+                                <div class="min-w-[24px] min-h-[24px] bg-[#7bac85] rounded-[3px] cursor-pointer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- +++++++++++++++++++++++++++++++++ ARRIVAL SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ CATEGORY SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <section class="arrival__section py-[80px] bg-[#f7eced]">
+        <div class="flex flex-col items-center justify-center space-y-5">
+            <h2 class="text-4xl md:text-5xl font-bold">Our Categories</h2>
+            <p class="text-center md:text-lg">Explore a wide range of styles, handpicked to suit every taste and need.
+            </p>
+        </div>
+        <div class="container mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-[50px]">
+                <div class="glass border-2 border-black rounded-[24px]">
+                    <div class="rounded-[24px] bg-cover overflow-hidden">
+                        <img class="w-full h-full max-w-full" src="/Images/category-01.jpg" alt="">
+                    </div>
+                </div>
+                <div class="glass border-2 border-black rounded-[24px]">
+                    <div class="rounded-[24px] bg-cover overflow-hidden">
+                        <img class="w-full h-full max-w-full" src="/Images/category-02.jpg" alt="">
+                    </div>
+                </div>
+                <div class="glass border-2 border-black rounded-[24px]">
+                    <div class="rounded-[24px] bg-cover overflow-hidden">
+                        <img class="w-full h-full max-w-full" src="/Images/category-03.jpg" alt="">
+                    </div>
+                </div>
+                <div class="glass border-2 border-black rounded-[24px]">
+                    <div class="rounded-[24px] bg-cover overflow-hidden">
+                        <img class="w-full h-full max-w-full" src="/Images/category-04.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- +++++++++++++++++++++++++++++++++ CATEGORY SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ SELLER SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <section class="py-[80px]">
+        <div class="flex flex-col items-center justify-center space-y-5">
+            <h2 class="text-4xl md:text-5xl font-bold">Bestsellers</h2>
+            <p class="text-center md:text-lg">From cult-favorite jackets to must-have dresses<br /> – These are our
+                customer faves.
+            </p>
+        </div>
+        <div class="container mx-auto px-5">
+            <div class="grid__container grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8 pt-[50px]">
+                <div class="glass1 relative">
+                    <div class="cart_image relative overflow-hidden mb-3 cursor-pointer">
+                        <img class="h-full w-full max-w-full" src="/Images/solid-shirt-blue-600x698.jpg" alt="">
+                        <div class="cart_icon absolute top-5 right-5 flex flex-col space-y-5">
+                            <span
+                                class="bg-[#FFFFFF] text-[#191516] cursor-pointer hover:bg-[#faf8f8f6] hover:text-red-400 transition duration-300 shadow-lg w-[40px] h-[40px] rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                </svg>
+                            </span>
+                            <span
+                                class="bg-[#FFFFFF] text-[#191516] cursor-pointer hover:bg-[#faf8f8f6] hover:text-red-400 transition duration-300 shadow-lg w-[40px] h-[40px] rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <a href="" class="text-xl font-semibold mb-1.5 md:mb-3">Solid Shirt</a>
+                        <span class="text-sm text-gray-500">Men</span>
+                        <div class="flex items-center gap-1 mb-3">
+                            <span>$120.00</span>
+                            <del>$150.00</del>
+                        </div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <div
+                                class="border border-gray-600 py-[4px] px-[6px] hover:border-[#111111] transition duration-300 cursor-pointer rounded flex items-center justify-center ">
+                                M</div>
+                            <div
+                                class="border border-gray-600 py-[4px] px-[6px] hover:border-[#111111] transition duration-300 cursor-pointer rounded flex items-center justify-center ">
+                                L</div>
+                            <div
+                                class="border border-gray-600 py-[4px] px-[6px] hover:border-[#111111] transition duration-300 cursor-pointer rounded flex items-center justify-center ">
+                                XL</div>
+                        </div>
+                    </div>
+                    <span
+                        class="absolute top-5 left-5 py-2 px-4.5 rounded-full bg-red-500 text-white text-sm">Sale!</span>
+                </div>
+                <div class="glass2">
+                    <div class="cart_image relative overflow-hidden cursor-pointer">
+                        <img class="w-full h-full max-w-full" src="/Images/princess-hoodie-600x697.jpg" alt="">
+                        <div class="cart_icon absolute top-5 right-5 flex flex-col space-y-5">
+                            <span
+                                class="bg-[#FFFFFF] text-[#191516] cursor-pointer hover:bg-[#faf8f8f6] hover:text-red-400 transition duration-300 shadow-lg w-[40px] h-[40px] rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                </svg>
+                            </span>
+                            <span
+                                class="bg-[#FFFFFF] text-[#191516] cursor-pointer hover:bg-[#faf8f8f6] hover:text-red-400 transition duration-300 shadow-lg w-[40px] h-[40px] rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <a href="" class="text-xl font-semibold mb-1.5 md:mb-3">Princess Hoodie</a>
+                        <span class="text-sm text-gray-500">Men</span>
+                        <div class="flex items-center gap-1 mb-3">
+                            <span>$130.00</span>
+                            <del>$140.00</del>
+                        </div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <div
+                                class="border border-gray-600 py-[4px] px-[6px] hover:border-[#111111] transition duration-300 cursor-pointer rounded flex items-center justify-center ">
+                                M</div>
+                            <div
+                                class="border border-gray-600 py-[4px] px-[6px] hover:border-[#111111] transition duration-300 cursor-pointer rounded flex items-center justify-center ">
+                                L</div>
+                            <div
+                                class="border border-gray-600 py-[4px] px-[6px] hover:border-[#111111] transition duration-300 cursor-pointer rounded flex items-center justify-center ">
+                                XL</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass3">
+                    <div class="cart_image relative overflow-hidden cursor-pointer">
+                        <img class="w-full h-full max-w-full" src="/Images/Girl-Purple-600x698.png" alt="">
+                        <div class="cart_icon absolute top-5 right-5 flex flex-col space-y-5">
+                            <span
+                                class="bg-[#FFFFFF] text-[#191516] cursor-pointer hover:bg-[#faf8f8f6] hover:text-red-400 transition duration-300 shadow-lg w-[40px] h-[40px] rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                </svg>
+                            </span>
+                            <span
+                                class="bg-[#FFFFFF] text-[#191516] cursor-pointer hover:bg-[#faf8f8f6] hover:text-red-400 transition duration-300 shadow-lg w-[40px] h-[40px] rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <a href="" class="text-xl font-semibold mb-1.5 md:mb-3">Summer T-Shirt</a>
+                        <span class="text-sm text-gray-500">Women</span>
+                        <div class="flex items-center gap-1 mb-3">
+                            <span>$70.00</span>
+                            <del>$90.00</del>
+                        </div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <div
+                                class="border border-gray-600 py-[4px] px-[6px] hover:border-[#111111] transition duration-300 cursor-pointer rounded flex items-center justify-center ">
+                                M</div>
+                            <div
+                                class="border border-gray-600 py-[4px] px-[6px] hover:border-[#111111] transition duration-300 cursor-pointer rounded flex items-center justify-center ">
+                                L</div>
+                            <div
+                                class="border border-gray-600 py-[4px] px-[6px] hover:border-[#111111] transition duration-300 cursor-pointer rounded flex items-center justify-center ">
+                                XL</div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="border border-white p-[1px] rounded-[3px] hover:border-black transition duration-300">
+                                <div class="min-w-[24px] min-h-[24px] bg-[#ac7ca1] rounded-[3px] cursor-pointer"></div>
+                            </div>
+                            <div
+                                class="border border-white p-[1px] rounded-[3px] hover:border-black transition duration-300">
+                                <div class="min-w-[24px] min-h-[24px] bg-[#7b8eab] rounded-[3px] cursor-pointer"></div>
+                            </div>
+                            <div
+                                class="border border-white p-[1px] rounded-[3px] hover:border-black transition duration-300">
+                                <div class="min-w-[24px] min-h-[24px] bg-[#7bac85] rounded-[3px] cursor-pointer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- +++++++++++++++++++++++++++++++++ SELLER SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ SELL SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <section class="seller__section py-[50px] relative flex flex-col items-center justify-center">
+        <div class="absolute inset-0 bg-black/70"></div>
+        <div class="z-10 text-center">
+            <h2 class="text-white text-center text-4xl md:text-6xl font-bold mb-6">Hurry Up! Get Up to 50% Off</h2>
+            <p class="text-center mb-6 text-white md:text-lg">Step into summer with sun-ready styles at can't-miss
+                prices.</p>
+            <a class="hero_btn uppercase py-3 inline-block px-4 rounded-full bg-red-500 text-white text-center hover:bg-red-600 transition duration-300 cursor-pointer"
+                href="">shop the summer sale</a>
+        </div>
+    </section>
+    <!-- +++++++++++++++++++++++++++++++++ SELL SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ TESTIMONIAL SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <section class="testimonial__section py-[80px]">
+        <div class="flex flex-col items-center justify-center space-y-5">
+            <h2 class="text-4xl md:text-5xl font-bold text-center">What Our<br> Shoppers Say</h2>
+            <p class="text-center md:text-lg">Store that nails fashion and comfort.
+            </p>
+        </div>
+        <div class="container mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-8 pt-[50px]">
+                <div class="galss bg-[#f7eced] rounded-[24px] py-12 px-8">
+                    <div class="flex flex-col space-y-4">
+                        <span class="text-[#ef233c]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-quote h-[70px] w-[70px] text-primary/40 mb-4">
+                                <path
+                                    d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                                </path>
+                                <path
+                                    d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                                </path>
+                            </svg>
+                        </span>
+                        <p>“Velora has completely transformed how I shop for clothes. Every piece feels thoughtfully
+                            designed and incredibly comfortable — from their polos to their jackets. It’s rare to find a
+                            brand that gets the fit, style, and quality right every single time.”</p>
+                        <div class="flex items-center space-x-6">
+                            <div class="w-[70px] max-w-full">
+                                <img class="w-full h-auto" src="/Images/testimonial-01.png" alt="">
+                            </div>
+                            <h4 class="text-black font-bold text-lg">Jessica M., San Diego</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="galss bg-[#f7eced] rounded-[24px] py-12 px-8 lg:mt-[60px] mb-0">
+                    <div class="flex flex-col space-y-4">
+                        <span class="text-[#ef233c]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-quote h-[70px] w-[70px] text-primary/40 mb-4">
+                                <path
+                                    d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                                </path>
+                                <path
+                                    d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                                </path>
+                            </svg>
+                        </span>
+                        <p>“I’m always looking for clean, versatile styles I can wear to work or on the weekends — and
+                            Velora delivers. I picked up a few items from their Men’s collection and was blown away by
+                            the craftsmanship. The trousers, especially, have become my go-to.”</p>
+                        <div class="flex items-center space-x-6">
+                            <div class="w-[70px] max-w-full">
+                                <img class="w-full h-auto" src="/Images/testimonial-02.png" alt="">
+                            </div>
+                            <h4 class="text-black font-bold text-lg">Darren L., New York</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="galss bg-[#f7eced] rounded-[24px] py-12 px-8">
+                    <div class="flex flex-col space-y-4">
+                        <span class="text-[#ef233c]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-quote h-[70px] w-[70px] text-primary/40 mb-4">
+                                <path
+                                    d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                                </path>
+                                <path
+                                    d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                                </path>
+                            </svg>
+                        </span>
+                        <p>“Shopping for myself and my daughter usually means bouncing between stores, but Velora made
+                            it easy. I loved the quality of the dresses I ordered, and my daughter adored her Mini Mode
+                            pieces. Stylish, comfortable, and built to last — we’re both fans for life!”</p>
+                        <div class="flex items-center space-x-6">
+                            <div class="w-[70px] max-w-full">
+                                <img class="w-full h-auto" src="/Images/testimonial-03.png" alt="">
+                            </div>
+                            <h4 class="text-black font-bold text-lg">Michelle T., Chicago</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- +++++++++++++++++++++++++++++++++ TESTIMONIAL SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ WORK SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <section class="py-[80px] bg-[#f7eced]">
+        <div class="flex flex-col items-center justify-center space-y-5 pb-[60px]">
+            <h2 class="text-4xl md:text-5xl font-bold text-center">How It Works</h2>
+            <p class="text-center md:text-lg">Just Pick, Pack and Ship
+            </p>
+        </div>
+        <div class="container mx-auto px-5">
+            <div
+                class="bg-white shadow-lg py-14 px-9 rounded-[24px] border border-gray-400 flex items-center gap-7 flex-col lg:flex-row ">
+                <div class=" flex gap-4 border-b lg:border-b-0 py-3 lg:py-0 lg:border-r border-gray-400 px-3 w-full">
+                    <div
+                        class="w-[40px] h-[40px] border-2 rounded-full border-red-500 flex items-center justify-center text-red-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                        </svg>
+                    </div>
+                    <div class="flex flex-col space-y-2.5">
+                        <h2 class="text-black text-xl font-bold">Shop Styles</h2>
+                        <p class="max-w-[200px]">Browse our curated collections for Men, Women, Kids & Accessories.</p>
+                    </div>
+                </div>
+                <div class=" flex gap-4 border-b lg:border-b-0 py-3 lg:py-0 lg:border-r border-gray-400 px-3 w-full">
+                    <div
+                        class="w-[40px] h-[40px] border-2 rounded-full border-red-500 flex items-center justify-center text-red-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+
+                    </div>
+                    <div class="flex flex-col space-y-2.5">
+                        <h2 class="text-xl text-black font-bold">Pick Your Fit</h2>
+                        <p class="max-w-[250px]">Find your perfect size with our detailed fit guides and style notes for
+                            every piece.</p>
+                    </div>
+                </div>
+                <div class=" flex gap-4 px-3 w-full">
+                    <div
+                        class="w-[40px] h-[40px] border-2 rounded-full border-red-500 flex items-center justify-center text-red-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75" />
+                        </svg>
+                    </div>
+                    <div class="flex flex-col space-y-2.5">
+                        <h2 class="text-xl text-black font-bold">Checkout Fast</h2>
+                        <p class="max-w-[200px]">Browse our curated collections for Men, Women, Kids & Accessories.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- +++++++++++++++++++++++++++++++++ WORK SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ SUBSCRIBE SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <section class="py-[80px]">
+        <div class="flex flex-col items-center justify-center space-y-5 pb-[60px]">
+            <h2 class="text-4xl md:text-5xl font-bold text-center">Get 10% Off on Your First Order</h2>
+            <p class="text-center md:text-lg">Plus exclusive access to product drops, style tips, and insider deals.
+            </p>
+        </div>
+        <div class="flex items-center justify-center">
+            <div class="flex items-center gap-4 md:flex-row flex-col w-[622px] max-w-full mx-auto px-5">
+                <input type="email" placeholder="ENTER YOUR EMAIL*"
+                    class="py-3 px-3 w-full border border-red-500 outline-red-500 rounded-[5px]">
+                <button
+                    class="text-lg bg-red-500 rounded-[5px] px-3 py-3 text-white font-[500] md:w-1/2 w-full cursor-pointer hover:bg-red-600 transition duration-300">SUBSCRIBE</button>
+            </div>
+        </div>
+        <div class="container mx-auto px-5">
+            <div class="grid__image grid grid-cols-2 md:grid-cols-4 gap-8 pt-[50px]">
+                <div class="glass1 rounded-[24px]">
+                    <div>
+                        <img class="rounded-[24px] w-full h-auto" src="/Images/footer-img-01.jpg" alt="">
+                    </div>
+                </div>
+                <div class="glass2 rounded-[24px]">
+                    <div>
+                        <img class="rounded-[24px] w-full h-auto" src="/Images/footer-img-02.jpg" alt="">
+                    </div>
+                </div>
+                <div class="glass3 rounded-[24px]">
+                    <div>
+                        <img class="rounded-[24px] w-full h-auto" src="/Images/footer-img-03.jpg" alt="">
+                    </div>
+                </div>
+                <div class="glass4 rounded-[24px]">
+                    <div>
+                        <img class="rounded-[24px] w-full h-auto" src="/Images/footer-img-04.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center justify-center gap-3 pt-[50px]">
+            <div class="text-[40px] text-red-500">
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+            <span class="font-bold text-black text-lg">Follow us</span>
+            <p>@VeloraStyle</p>
+        </div>
+    </section>
+    <!-- +++++++++++++++++++++++++++++++++ SUBSCRIBE SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ DELIVERY SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <section class="py-[80px] bg-[#f7eced]">
+        <div class="container mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass flex flex-col items-center justify-center">
+                    <div class="text-[50px] text-red-500 mb-4">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+                    <div class="flex flex-col space-y-2.5 text-center">
+                        <span class="text-lg font-bold text-black">Free Standard Delivery</span>
+                        <p>On all Orders Over $100</p>
+                    </div>
+                </div>
+                <div class="glass flex flex-col items-center justify-center">
+                    <div class="text-[50px] text-red-500 mb-4">
+                        <i class="fa-solid fa-truck-field-un"></i>
+                    </div>
+                    <div class="flex flex-col space-y-2.5 text-center">
+                        <span class="text-lg font-bold text-black">Quick Delivery</span>
+                        <p>Delivery within 3 Days across US</p>
+                    </div>
+                </div>
+                <div class="glass flex flex-col items-center justify-center">
+                    <div class="text-[50px] text-red-500 mb-4">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </div>
+                    <div class="flex flex-col space-y-2.5 text-center">
+                        <span class="text-lg font-bold text-black">Secure Payments</span>
+                        <p>Secure Payment Methods</p>
+                    </div>
+                </div>
+                <div class="glass flex flex-col items-center justify-center">
+                    <div class="text-[50px] text-red-500 mb-4">
+                        <i class="fa-brands fa-servicestack"></i>
+                    </div>
+                    <div class="flex flex-col space-y-2.5 text-center">
+                        <span class="text-lg font-bold text-black">Top Rated Customer Service</span>
+                        <p>Quick Responses & Solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- +++++++++++++++++++++++++++++++++ DELIVERY SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ FOOTER SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <footer class="py-[80px] bg-black text-white">
+        <div class="container mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8 border-b-2 border-white pb-10">
+                <div class="glass">
+                    <div class="logo w-[100px] mb-3">
+                        <a href="">
+                            <img src="/Images/footer-logo.svg" alt="">
+                        </a>
+                    </div>
+                    <p class="mb-5">Classic looks for Men,<br> Women & Kids.</p>
+                    <ul class="flex items-center space-x-2.5">
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-instagram"></i>
+                        </li>
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </li>
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </li>
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">Quick Links</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg text-red-500" href="index.html">Home</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="shop.html">Shop</a>
+                        </li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="about.html" target="_blank">About</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="contact.html" target="_blank">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">Shop</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Mens
+                                Wear</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Womens
+                                Wear</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Kids
+                                Wear</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">Help</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="">FAQ’s</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Return
+                                Policy</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Order
+                                Status</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Shipping
+                                & Delivery</a></li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">My Profile</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">My
+                                Account</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Track
+                                Order</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">My
+                                Cart</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Order
+                                History</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-[40px] flex flex-col md:flex-row space-y-3 md:space-y-0 items-center justify-between">
+                <p class="md:text-lg font-[500] text-center">Copyright © 2025 Clothing Store All rights reserved</p>
+                <div>
+                    <img src="/Images/payments.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- +++++++++++++++++++++++++++++++++ FOOTER SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+        integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="index.js"></script>
+    <script src="scrolltrigger.js"></script>
+</body>
+
+</html>

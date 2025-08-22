@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Clothing Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
+    <!-- font awesome cdn link for all icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="text-[16px] font-[400] bg-[#ffffff] text-black">
+
+    <!-- +++++++++++++++++++++++++++++++++ NAVBAR SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <header class="bg-white shadow-lg">
+        <div class="container mx-auto px-5">
+            <nav class="flex items-center justify-between py-6">
+                <div class="logo">
+                    <a href="">
+                        <img src="/Images/header-logo.svg" alt="">
+                    </a>
+                </div>
+                <button class="menu-toggle border border-red-500 rounded-[5px] p-[2px] md:hidden" id="menu-btn">
+                    <span class="hamburger">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                            <path fill-rule="evenodd"
+                                d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    <span class="close">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+                            <path fill-rule="evenodd"
+                                d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+                    </span> <!-- × -->
+                </button>
+                <ul class="md:flex items-center gap-6 hidden">
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300 text-red-500"
+                            href="index.html" target="_blank">Home</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="shop.html"
+                            target="_blank">Shop</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300"
+                            href="blog.html">Blog</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="about.html" target="_blank">About</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="career.html" target="_blank">Carrers</a>
+                    </li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="faqs.html" target="_blank">FAQ's</a></li>
+                    <li><a class="text-lg font-[500] hover:text-red-500 transition duration-300" href="contact.html" target="_blank">Contact</a>
+                    </li>
+                </ul>
+                <div class="icons md:flex items-center gap-4 hidden">
+                    <button class="cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        </svg>
+                    </button>
+                    <button class="Bag-icon cursor-pointer relative transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                        </svg>
+                        <span
+                            class="absolute top-[-7px] left-[20px] bg-black w-[18px] h-[18px] rounded-full text-white flex items-center justify-center text-sm transition duration-300">0</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <div class="py-4 md:flex hidden items-center justify-center bg-black text-white">
+            <p>Get 15% off on your first order</p>
+        </div>
+    </header>
+    <div class="mobile__menu bg-white shadow-lg md:hidden" id="mobileMenu">
+        <ul class="flex flex-col space-y-7 py-7 px-2">
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300 text-red-500"
+                    href="index.html">Home <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="shop.html">Shop <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="blog.html">Blog <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor" class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="about.html" target="_blank">About <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="career.html" target="_blank">Carrers <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="faqs.html" target="_blank">FAQ's <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a></li>
+            <li><a class="flex items-center justify-between text-lg font-[500] hover:text-red-500 transition duration-300"
+                    href="contact.html" target="_blank">Contact <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="size-[18px]">
+                        <path fill-rule="evenodd"
+                            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- +++++++++++++++++++++++++++++++++ NAVBAR SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ BLOG HERO SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <section class="blog__hero relative">
+        <div class="absolute z-10 top-[30%] right-[20%]">
+            <h1 class="text-black font-[900] text-5xl md:text-6xl lg:text-7xl mb-4">Style,<br>Tips &<br> More</h1>
+            <p>Welcome to The Velora Edit, your go-to <br> destination for all things fashion.</p>
+        </div>
+    </section>
+    <!-- +++++++++++++++++++++++++++++++++ BLOG HERO SECTION END++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ CART CONTAINER HERO SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <section class="py-[70px]">
+        <div class="container mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="blog__glass rounded-[24px]  bg-white shadow-lg overflow-hidden pb-[30px]">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-auto max-w-full rounded-tl-[24px] rounded-tr-[24px] cursor-pointer transition duration-300"
+                            src="/Images/blog-post-06.jpg" alt="">
+                    </div>
+                    <div class="flex flex-col space-y-3.5 py-4 px-6">
+                        <h2 class="text-2xl font-bold text-black">Top 5 Accessories That Elevate Any Look</h2>
+                        <span class="text-lg font-bold">May 15, 2025 | 2 minutes of reading</span>
+                        <p>1. Statement Earrings: The Instant Game-Changer Nothing draws attention quite like a pair of
+                            bold statement earrings. Whether you prefer […]</p>
+                    </div>
+                </div>
+                <div class="blog__glass rounded-[24px] bg-white shadow-lg overflow-hidden pb-[30px]">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-auto max-w-full rounded-tl-[24px] rounded-tr-[24px] cursor-pointer transition duration-300"
+                            src="/Images/blog-post-05.jpg" alt="">
+                    </div>
+                    <div class="flex flex-col space-y-3.5 py-4 px-6">
+                        <h2 class="text-2xl font-bold text-black">Mix, Match, Repeat: Building Outfits with Fewer Pieces
+                        </h2>
+                        <span class="text-lg font-bold">May 15, 2025 | 1 minute of reading</span>
+                        <p>Make the Most of What You Have Creating stylish outfits doesn’t require an overflowing
+                            closet—it’s all about making smart choices</p>
+                    </div>
+                </div>
+                <div class="blog__glass rounded-[24px] bg-white shadow-lg overflow-hidden pb-[30px]">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-auto max-w-full rounded-tl-[24px] rounded-tr-[24px] cursor-pointer transition duration-300"
+                            src="/Images/blog-post-04.jpg" alt="">
+                    </div>
+                    <div class="flex flex-col space-y-3.5 py-4 px-6">
+                        <h2 class="text-2xl font-bold text-black">Velora Kids: Fashion Meets Functionality</h2>
+                        <span class="text-lg font-bold">May 15, 2025 | 2 minute of reading</span>
+                        <p>Designed for Play, Styled for Life At Velora Kids, we believe children’s clothing should
+                            never make you choose between looking</p>
+                    </div>
+                </div>
+                <div class="blog__glass rounded-[24px]  bg-white shadow-lg overflow-hidden pb-[30px]">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-auto max-w-full rounded-tl-[24px] rounded-tr-[24px] cursor-pointer transition duration-300"
+                            src="/Images/blog-post-03.jpg" alt="">
+                    </div>
+                    <div class="flex flex-col space-y-3.5 py-4 px-6">
+                        <h2 class="text-2xl font-bold text-black">Our Favorite Summer Looks: Light, Breezy & Bold</h2>
+                        <span class="text-lg font-bold">May 15, 2025 | 2 minutes of reading</span>
+                        <p>Effortless Chic: The Power of Linen & Cotton When the temperature rises, comfort meets style
+                            in the form of lightweight</p>
+                    </div>
+                </div>
+                <div class="blog__glass rounded-[24px] bg-white shadow-lg overflow-hidden pb-[30px]">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-auto max-w-full rounded-tl-[24px] rounded-tr-[24px] cursor-pointer transition duration-300"
+                            src="/Images/blog-post-02.jpg" alt="">
+                    </div>
+                    <div class="flex flex-col space-y-3.5 py-4 px-6">
+                        <h2 class="text-2xl font-bold text-black">How to Style One Jacket Three Ways
+                        </h2>
+                        <span class="text-lg font-bold">May 15, 2025 | 1 minute of reading</span>
+                        <p>Look 1: Casual Day Out Whether you’re grabbing a coffee or heading to a weekend market, your
+                            go-to jacket can</p>
+                    </div>
+                </div>
+                <div class="blog__glass rounded-[24px] bg-white shadow-lg overflow-hidden pb-[30px]">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-auto max-w-full rounded-tl-[24px] rounded-tr-[24px] cursor-pointer transition duration-300"
+                            src="/Images/blog-post-01.jpg" alt="">
+                    </div>
+                    <div class="flex flex-col space-y-3.5 py-4 px-6">
+                        <h2 class="text-2xl font-bold text-black">5 Must-Have Staples for a Capsule Wardrobe</h2>
+                        <span class="text-lg font-bold">May 15, 2025 | 2 minute of reading</span>
+                        <p>1. The Classic White Shirt A crisp white shirt is a timeless essential that effortlessly
+                            transitions from professional to casual.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ FOOTER SECTION START ++++++++++++++++++++++++++++++++++ -->
+    <footer class="py-[80px] bg-black text-white">
+        <div class="container mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8 border-b-2 border-white pb-10">
+                <div class="glass">
+                    <div class="logo w-[100px] mb-3">
+                        <a href="">
+                            <img src="/Images/footer-logo.svg" alt="">
+                        </a>
+                    </div>
+                    <p class="mb-5">Classic looks for Men,<br> Women & Kids.</p>
+                    <ul class="flex items-center space-x-2.5">
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-instagram"></i>
+                        </li>
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </li>
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </li>
+                        <li
+                            class="w-[44px] h-[44px] rounded-full flex items-center justify-center text-white hover:bg-red-500 text-2xl cursor-pointer">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">Quick Links</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg text-red-500" href="index.html">Home</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="shop.html">Shop</a>
+                        </li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="about.html" target="_blank">About</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="contact.html" target="_blank">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">Shop</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Mens
+                                Wear</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Womens
+                                Wear</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Kids
+                                Wear</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">Help</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300"
+                                href="">FAQ’s</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Return
+                                Policy</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Order
+                                Status</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Shipping
+                                & Delivery</a></li>
+                    </ul>
+                </div>
+                <div class="glass">
+                    <h3 class="text-2xl font-bold mb-3">My Profile</h3>
+                    <ul class="flex flex-col space-y-3">
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">My
+                                Account</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Track
+                                Order</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">My
+                                Cart</a></li>
+                        <li><a class="font-[500] md:text-lg hover:text-red-500 transition duration-300" href="">Order
+                                History</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-[40px] flex flex-col md:flex-row space-y-3 md:space-y-0 items-center justify-between">
+                <p class="md:text-lg font-[500] text-center">Copyright © 2025 Clothing Store All rights reserved</p>
+                <div>
+                    <img src="/Images/payments.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- +++++++++++++++++++++++++++++++++ FOOTER SECTION END ++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+        integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="index.js"></script>
+    <script src="scrolltrigger.js"></script>
+</body>
+
+</html>
